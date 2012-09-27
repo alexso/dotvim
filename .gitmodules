@@ -13,3 +13,6 @@
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
 	url = git://github.com/Townk/vim-autoclose.git
+[submodule "bundle/a"]
+	path = bundle/a
+	url = git://github.com/vim-scripts/a.vim.git
