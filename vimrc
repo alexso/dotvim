@@ -32,11 +32,11 @@ nnoremap ; :
 set tags=./tags
 
 "sort taglist on name
-"let Tlist_Sort_Type = "name" 
-"let Tlist_Show_Menu = 1
-"let Tlist_Use_Right_Window = 1 "Put taglist on the right side
+let Tlist_Sort_Type = "name" 
+let Tlist_Show_Menu = 1
+let Tlist_Use_Right_Window = 1 "Put taglist on the right side
 "Show only tags for the current file
-"let Tlist_Show_One_File = 1 
+let Tlist_Show_One_File = 1 
 
 filetype on "Detect file type
 map <C-tab> :A<CR> "A.vim plugin. ctrl-tab toggle header/source
