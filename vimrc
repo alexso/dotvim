@@ -1,8 +1,8 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-autocmd vimenter * NERDTree "Automatically start nerdtree at startup
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "Close vim if only window left is nerdtree
+"autocmd vimenter * NERDTree "Automatically start nerdtree at startup
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "Close vim if only window left is nerdtree
 
 set nocompatible "stops vim from behaving in a strongly vi -compatible way
 syntax on "Enables vim's syntax highlighting
