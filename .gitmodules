@@ -22,3 +22,6 @@
 [submodule "bundle/omnicppcomplete"]
 	path = bundle/omnicppcomplete
 	url = git://github.com/vim-scripts/OmniCppComplete.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = git://github.com/tmhedberg/matchit.git
