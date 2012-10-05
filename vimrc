@@ -29,6 +29,11 @@ set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.
 set cursorline
 set scrolloff=3                 " minimum lines to keep above and below cursor
 
+" Turn backup off, since most stuff is in SVN, git anyway...
+set nobackup
+set nowb
+set noswapfile
+
 "Map F2 to Toggle NerdTree plugin
 map <F2> :NERDTreeToggle<CR> 
 
