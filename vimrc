@@ -28,6 +28,13 @@ set pastetoggle=<F4>
 "Map ; to : so ; can be used instead
 nnoremap ; : 
 
+"Toggle line number
+:nmap <C-N><C-N> :set invnumber<CR>
+
+"Shortcut to auto indent entire file
+:nmap <F11> 1G=G
+:imap <F11> <ESC>1G=Ga
+
 "Look for tags in current directory and parent(recursive)
 set tags=./tags
 
