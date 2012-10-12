@@ -74,10 +74,13 @@ nmap <F6> :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.h
 	\:cs reset<CR>
 " F8 Run ctags
 map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> 
-nmap t% :tabedit %<CR>
+"nmap t% :tabedit %<CR>
 nmap td :tabclose<CR>
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 nmap <leader>f :CtrlP<cr>
 let g:cfind = 'find %s -type f'
 "let g:EasyMotion_leader_key = '<Leader>'
 
+"SQ save session and SO opens session in normal mode
+nmap SQ :wa<CR>:mksession! ~/.vim/sessions/
+nmap SO :wa<CR>:so ~/.vim/sessions/
