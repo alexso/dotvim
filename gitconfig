@@ -1,0 +1,26 @@
+[user]
+	name = John Doe 
+	email = john.doe@mail.com
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = white
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = white bold
+[color "status"]
+  added = yellow
+  changed = white
+  untracked = cyan
+
+[alias]
+  st = status
+  ci = commit -v
+  co = checkout
+[core]
+  autocrlf = input
+
