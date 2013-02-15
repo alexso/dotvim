@@ -62,6 +62,9 @@ let Tlist_Show_Menu = 1
 let Tlist_Use_Right_Window = 1 		" Put taglist on the right side
 let Tlist_Show_One_File = 1 			" Show only tags for the current file
 
+"Fix nerdtree doesn't work on non-UTF-8 machines
+let g:NERDTreeDirArrows=0
+
 filetype on 											" Detect file type
 "A.vim plugin. ctrl-tab toggle header/source
 map <C-tab> :A<CR> 								
