@@ -31,3 +31,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
+[submodule "bundle/easytags"]
+	path = bundle/easytags
+	url = git://github.com/xolox/vim-easytags.git
