@@ -1,12 +1,15 @@
 "autocmd vimenter * NERDTree "Automatically start nerdtree at startup
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "Close vim if only window left is nerdtree
 set nocompatible 								" stops vim from behaving in a strongly vi -compatible way
+filetype on
+filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "My bundles here:
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Lokaltog/vim-easymotion'
@@ -19,6 +22,11 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
+Bundle 'vim-scripts/ZoomWin'
+Bundle 'bronson/vim-visual-star-search'
+Bundle 'Lokaltog/powerline'
+Bundle 'gregsexton/gitv'
+Bundle 'ervandew/supertab'
 
 filetype plugin indent on
 syntax on 											" Enables vim's syntax highlighting
@@ -32,6 +40,8 @@ set incsearch 									" updates search for ever keypress
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 nnoremap <CR> :noh<CR><CR>      " This unsets the last search pattern register by hitting return
+" better ESC
+inoremap jk <Esc>
 
 "userinterface
 set number 											" Show line number
@@ -51,13 +61,13 @@ set nowb
 set noswapfile
 
 " For when you forget to sudo.. Really Write the file.
-cmap w!! w !sudo tee % >/dev/null
+ca w!! w !sudo tee "%"
 
 "Map F2 to Toggle NerdTree plugin
-map <F2> :NERDTreeToggle<CR> 
+map <F2> :NERDTreeTabsToggle<CR> 
 
 "Map F3 to Toggle Tagbar plugin
-"nnoremap <silent> <F3> :TagbarToggle<CR> 
+"sdfnnoremap <silent> <F3> :TagbarToggle<CR> 
 nnoremap <silent> <F3> :TagbarToggle<CR>
 
 "Map F4 to toggle pastemode in insert mode
