@@ -1,10 +1,13 @@
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 "autocmd vimenter * NERDTree "Automatically start nerdtree at startup
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "Close vim if only window left is nerdtree
-
 set nocompatible 								" stops vim from behaving in a strongly vi -compatible way
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+"My bundles here:
+
+filetype plugin indent on
 syntax on 											" Enables vim's syntax highlighting
 set tabstop=2 									" tab is 2 spaces
 set autoindent 									" Autoindent lines
@@ -76,7 +79,7 @@ nmap <F6> :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.h
   \:!cscope -b -i cscope.files -f cscope.out<CR>
 	\:cs reset<CR>
 " F8 Run ctags
-map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> 
+"map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> 
 "nmap t% :tabedit %<CR>
 nmap td :tabclose<CR>
 :nnoremap <F5> :buffers<CR>:buffer<Space>
