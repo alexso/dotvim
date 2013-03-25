@@ -13,14 +13,15 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'xolox/vim-easytags'
+" Bundle 'xolox/vim-easytags'
+Bundle 'vim-scripts/TagHighlight'
 "Bundle 'spf13/PIV'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Townk/vim-autoclose'
-Bundle 'tpope/vim-surround'
+"Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'bronson/vim-visual-star-search'
@@ -83,6 +84,9 @@ nnoremap ; :
 :nmap <F11> 1G=G
 :imap <F11> <ESC>1G=Ga
 
+" Enable fancy mode 
+let g:Powerline_symbols = 'fancy'   " Powerline
+set statusline=%{expand('%:p:t')}\ %<[%{expand('%:p:h')}]%=\ %m%r%y%w[%{&fenc!=''?&fenc:&enc}][%{&ff}][%3l,%3c,%3p]
 "Look for tags in current directory and parent(recursive)
 "set tags=./tags
 
@@ -108,7 +112,7 @@ nmap <F6> :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.h
 	\:cs reset<CR>
 " F5 Run ctags
 "map <F5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> 
-nnoremap <silent> <F5> :UpdateTags<CR>
+nnoremap <silent> <F5> :UpdateTypesFile<CR>
 "nmap t% :tabedit %<CR>
 nmap td :tabclose<CR>
 :nnoremap <F8> :buffers<CR>:buffer<Space>
@@ -229,12 +233,13 @@ nmap SO :wa<CR>:so ~/.vim/sessions/
 " }
 
 " easytags {
-set tags=./tags;,$HOME/.vim/vimtags
-let g:easytags_always_enabled = 0
-let g:easytags_autorecurse = 0
-let g:easytags_file = '~/.vim/vimtags/easytags'
-let g:easytags_dynamic_files = 1
-let g:easytags_by_filetype = "~/.vim/vimtags/"
-let g:easytags_auto_highlight = 1
-let g:easytags_include_members = 1
+"set tags=./tags;,$HOME/.vim/vimtags
+"let g:easytags_always_enabled = 0
+"let g:easytags_autorecurse = 0
+"let g:easytags_file = '~/.vim/vimtags/easytags'
+"let g:easytags_dynamic_files = 0
+"let g:easytags_by_filetype = 
+"~/.vim/vimtags/"
+"let g:easytags_auto_highlight = 0
+"let g:easytags_include_members = 1
 " }
