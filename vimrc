@@ -27,6 +27,7 @@ Bundle 'bronson/vim-visual-star-search'
 Bundle 'Lokaltog/powerline'
 Bundle 'gregsexton/gitv'
 Bundle 'ervandew/supertab'
+Bundle 'chazy/cscope_maps'
 
 filetype plugin indent on
 syntax on 											" Enables vim's syntax highlighting
@@ -229,8 +230,8 @@ nmap SO :wa<CR>:so ~/.vim/sessions/
 
 " easytags {
 set tags=./tags;,$HOME/.vim/vimtags
-let g:easytags_always_enabled = 1
-let g:easytags_autorecurse = 1
+let g:easytags_always_enabled = 0
+let g:easytags_autorecurse = 0
 let g:easytags_file = '~/.vim/vimtags/easytags'
 let g:easytags_dynamic_files = 1
 let g:easytags_by_filetype = "~/.vim/vimtags/"
