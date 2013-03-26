@@ -29,6 +29,7 @@ Bundle 'Lokaltog/powerline'
 Bundle 'gregsexton/gitv'
 Bundle 'ervandew/supertab'
 Bundle 'chazy/cscope_maps'
+Bundle 'vim-scripts/AutoTag'
 
 filetype plugin indent on
 syntax on 											" Enables vim's syntax highlighting
@@ -62,8 +63,8 @@ set nobackup
 set nowb
 set noswapfile
 
-" For when you forget to sudo.. Really Write the file.
-ca w!! w !sudo tee "%"
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
 
 "Map F2 to Toggle NerdTree plugin
 map <F2> :NERDTreeTabsToggle<CR> 
