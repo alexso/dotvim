@@ -30,6 +30,7 @@ Bundle 'gregsexton/gitv'
 Bundle 'ervandew/supertab'
 Bundle 'chazy/cscope_maps'
 Bundle 'vim-scripts/AutoTag'
+Bundle 'vim-scripts/a.vim'
 
 filetype plugin indent on
 syntax on 											" Enables vim's syntax highlighting
