@@ -131,7 +131,7 @@ let g:cfind = 'find %s -type f'
 "easymotion is by default defined to <leader><leader>. Use <leader><Leader>w for highlight word e.g.
 "let g:EasyMotion_leader_key = '<Leader>'
 
-"SQ save session and SO opens session in normal mode
+"write SQ save session and SO opens session in normal mode without :
 nmap SQ :wa<CR>:mksession! ~/.vim/sessions/
 nmap SO :wa<CR>:so ~/.vim/sessions/
 
