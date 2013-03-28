@@ -14,7 +14,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'xolox/vim-easytags'
-Bundle 'vim-scripts/TagHighlight'
+" Bundle 'vim-scripts/TagHighlight'
 "Bundle 'spf13/PIV'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Shougo/neocomplcache'
@@ -25,9 +25,9 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'godlygeek/tabular'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'bronson/vim-visual-star-search'
-Bundle 'Lokaltog/powerline'
-Bundle 'gregsexton/gitv'
-Bundle 'ervandew/supertab'
+"Bundle 'Lokaltog/powerline'
+" Bundle 'gregsexton/gitv'
+" Bundle 'ervandew/supertab'
 Bundle 'chazy/cscope_maps'
 Bundle 'vim-scripts/AutoTag'
 Bundle 'vim-scripts/a.vim'
@@ -35,7 +35,12 @@ Bundle 'vim-scripts/a.vim'
 filetype plugin indent on
 syntax on 											" Enables vim's syntax highlighting
 set tabstop=2 									" tab is 2 spaces
+set cindent
+set smartindent
+set shiftwidth=2
+set softtabstop=2
 set autoindent 									" Autoindent lines
+set backspace=2                 " Allow backspacing over indent, eol, and the start of an insert	
 color ron 											" Colorscheme ron
 
 ""Searching
@@ -43,21 +48,24 @@ set hlsearch 										" highlight search hits
 set incsearch 									" updates search for ever keypress
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
-nnoremap <CR> :noh<CR><CR>      " This unsets the last search pattern register by hitting return
-" better ESC
+set nowrap
+" This unsets the last search pattern register by hitting return better ESC
+nnoremap <CR> :noh<CR><CR>      
 inoremap jk <Esc>
 
 "userinterface
 set number 											" Show line number
 set showmatch										" Show matching bracets when text indicator is over them
+set encoding=utf-8
 set ruler												" Always show current position
 set cmdheight=2									" The commandbar height
-set ls=2												" Always show filename
+set laststatus=2								" Always show filename
 set visualbell t_vb=            " No bell!
 set wildmode=list:longest,full  " command <Tab> completion, list matches, then longest common part, then all.
 set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.DS_Store
 set cursorline
 set scrolloff=3                 " minimum lines to keep above and below cursor
+set virtualedit=all
 
 " Turn backup off, since most stuff is in SVN, git anyway...
 set nobackup
@@ -87,8 +95,8 @@ nnoremap ; :
 :imap <F11> <ESC>1G=Ga
 
 " Enable fancy mode 
-let g:Powerline_symbols = 'fancy'   " Powerline
-set statusline=%{expand('%:p:t')}\ %<[%{expand('%:p:h')}]%=\ %m%r%y%w[%{&fenc!=''?&fenc:&enc}][%{&ff}][%3l,%3c,%3p]
+"let g:Powerline_symbols = 'fancy'   " Powerline
+set statusline=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
 "Look for tags in current directory and parent(recursive)
 "set tags=./tags
 
@@ -120,6 +128,7 @@ nmap td :tabclose<CR>
 :nnoremap <F8> :buffers<CR>:buffer<Space>
 nmap <leader>f :CtrlP<cr>
 let g:cfind = 'find %s -type f'
+"easymotion is by default defined to <leader><leader>. Use <leader><Leader>w for highlight word e.g.
 "let g:EasyMotion_leader_key = '<Leader>'
 
 "SQ save session and SO opens session in normal mode
