@@ -90,6 +90,9 @@ nnoremap ; :
 "Toggle line number
 :nmap <C-N><C-N> :set invnumber<CR>
 
+"Toggle comment
+map <C-m> <leader>ci 
+
 "Shortcut to auto indent entire file
 :nmap <F11> 1G=G
 :imap <F11> <ESC>1G=Ga
