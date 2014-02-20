@@ -15,4 +15,6 @@ SQ to save session
 SO to open session
 jk for escape in insert mode
 
+:w!! to write with sudo
+
 F8 for buffers

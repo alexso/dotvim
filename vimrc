@@ -90,6 +90,11 @@ nnoremap ; :
 "Toggle line number
 :nmap <C-N><C-N> :set invnumber<CR>
 
+" Sudo to write
+cmap w!! w !sudo tee % >/dev/null
+
+
+
 "Toggle comment
 map <C-m> <leader>ci 
 
